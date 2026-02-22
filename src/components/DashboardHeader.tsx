@@ -1,7 +1,9 @@
 import { Bell, Search } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-destination.jpg";
 
 const DashboardHeader = () => {
+  const navigate = useNavigate();
   return (
     <header>
       {/* Top Bar */}
@@ -38,7 +40,7 @@ const DashboardHeader = () => {
             <p className="text-card/80 text-sm mt-1 max-w-md">
               Discover curated travel packages and manage your tours all in one place.
             </p>
-            <button className="mt-3 px-5 py-2 rounded-lg bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
+            <button onClick={() => navigate("/packages")} className="mt-3 px-5 py-2 rounded-lg bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity">
               View Packages
             </button>
           </div>
